@@ -30,10 +30,11 @@ app.post("/", function (req, res) {
     ],
   };
   const jsonData = JSON.stringify(data);
-  const url = "https://us18.api.mailchimp.com/3.0/lists/dac11f6ce1";
+  //use your api key here
+ 
   const options = {
     method: "POST",
-    auth: "Mitali:6606c369f8c1a9bc0df16683c7025385-us18",
+  // auth: 
   };
 
   const request = https.request(url, options, function (response) {
@@ -58,5 +59,3 @@ res.redirect("/");
 app.listen(process.env.PORT || 3000, function () {
   console.log("server is running on port 3000");
 });
-// 6606c369f8c1a9bc0df16683c7025385-us18 api key
-// list id or audience id dac11f6ce1
